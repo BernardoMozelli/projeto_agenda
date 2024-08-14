@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/sweet_alert.js"></script>
+</head>
+
+<body class="body">
+
+    <section class="container">
+        <form method="POST" action="conexao.php">
+            <script src="./assets/js/valida.js"></script>
+            <h1>Agende a sua Tarefa</h1>
+
+            <Label>
+                <h3>
+                    Título
+                </h3>
+            </Label>
+
+            <input type="text" maxlength="50" placeholder="Insira o título" name="tarefa" id="tarefa" required>
+
+
+            <label>
+                <h3>
+                    Descrição:
+                </h3>
+
+            </label>
+
+            <input  class="input-descricao" type="text" maxlength="100" placeholder="Informe a descrição" name="descricao" id="descricao" required>
+
+            <label>
+                <h3>
+                    Horário:
+                </h3>
+
+            </label>
+
+            <input type="time" maxlength=10  placeholder="Informe o horário" name="horario" id="horario">
+
+            <label>
+                <h3>
+                    Data:
+                </h3>
+
+            </label>
+
+            <input type="date" maxlength=10 name="data" id="data" onblur="return validaCampos()">
+
+            <button type="submit" class="button" id="agendar" onclick="return validaCampos()">
+                Agendar
+			</button>
+            </p>
+
+        </form>
+
+    </section>
+
+</body>
+
+</html>
